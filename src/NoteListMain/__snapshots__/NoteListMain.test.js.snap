@@ -8,7 +8,7 @@ exports[`NoteListMain component renders a .NoteListMain by default 1`] = `
   <div
     className="NoteListMain__button-container"
   >
-    <[object Object]
+    <NavCircleButton
       className="NoteListMain__add-note-button"
       tag={
         Object {
@@ -48,7 +48,7 @@ exports[`NoteListMain component renders a .NoteListMain by default 1`] = `
       />
       <br />
       Note
-    </[object Object]>
+    </NavCircleButton>
   </div>
 </section>
 `;
@@ -63,6 +63,7 @@ exports[`NoteListMain component renders a Note in ul for each notes in array 1`]
       id="cbc787a0-ffaf-11e8-8eb2-f2801f1b9fd1"
       modified="2019-01-03T00:00:00.000Z"
       name="Dogs"
+      onDeleteNote={[Function]}
     />
      
   </li>
@@ -74,6 +75,7 @@ exports[`NoteListMain component renders a Note in ul for each notes in array 1`]
       id="d26e0034-ffaf-11e8-8eb2-f2801f1b9fd1"
       modified="2018-08-15T23:00:00.000Z"
       name="Cats"
+      onDeleteNote={[Function]}
     />
      
   </li>
@@ -85,6 +87,7 @@ exports[`NoteListMain component renders a Note in ul for each notes in array 1`]
       id="d26e01a6-ffaf-11e8-8eb2-f2801f1b9fd1"
       modified="2018-03-01T00:00:00.000Z"
       name="Pigs"
+      onDeleteNote={[Function]}
     />
      
   </li>
@@ -96,6 +99,7 @@ exports[`NoteListMain component renders a Note in ul for each notes in array 1`]
       id="d26e0570-ffaf-11e8-8eb2-f2801f1b9fd1"
       modified="2019-01-04T00:00:00.000Z"
       name="Birds"
+      onDeleteNote={[Function]}
     />
      
   </li>
