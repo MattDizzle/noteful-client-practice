@@ -23,10 +23,15 @@ class App extends Component {
       fetch(`${config.API_ENDPOINT}/folders`)
     ])
       .then(([notesRes, foldersRes]) => {
-        if (!notesRes.ok)
+        if (!notesRes.ok){
+        console.log(notesRes)
           return notesRes.json().then(e => Promise.reject(e))
-        if (!foldersRes.ok)
+        }
+
+        if (!foldersRes.ok) {
+        console.log(foldersRes)
           return foldersRes.json().then(e => Promise.reject(e))
+        }
 
         return Promise.all([
           notesRes.json(),
