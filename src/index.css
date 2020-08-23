@@ -1,13 +1,96 @@
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Roboto&family=Squada+One&display=swap');
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #102027;
+  color: #fff;
+}
+
+main{
+  display:flex;
+  width:70%;
+  margin:auto;
+}
+
+h1, h2, h3 {
+  font-family: 'Squada One', sans-serif;
+  font-weight: 400;
+  margin:0px;
+  text-transform: uppercase;
+  color: #bbdefb;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+header{
+  text-align: left;
+  width:70%;
+  margin:15px auto;
+
+}
+
+.folder-active{
+  text-align: center;
+  padding:15px;
+  background-color: #62727b;
+  margin: 0 0 5px 0;
+}
+
+.folderslist{
+  flex:1;
+  display:flex;
+  flex-direction: column;
+}
+
+.folder {
+  text-align: center;
+  padding:15px;
+  background-color:#37474f;
+  margin: 0 0 5px 0;
+}
+
+.noteslist{
+  flex:2;
+  flex-direction: row;
+  padding:0 0 5px 5px;;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  padding:15px;
+  margin: 0 0 5px 0;
+  background-color: #62727b;
+}
+
+button {
+  background-color: #bbdefb;
+  padding:15px 30px;
+  border:0px;
+  max-width: 140px;
+}
+
+form {
+  width:30rem;
+}
+
+input {
+  height:2rem;
+  width:100%;
+  margin: 0 0 10px 0;
+}
+
+select {
+  height:2.5rem;
+  width:100%;
+  margin: 0 0 10px 0;
+}
+
+link {
+  cursor: pointer;
 }
