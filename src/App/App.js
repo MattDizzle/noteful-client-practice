@@ -12,10 +12,13 @@ import config from '../config'
 import './App.css'
 
 class App extends Component {
-  state = {
+   constructor(props) {
+    super(props)
+    this.state = {
     notes: [],
     folders: [],
-  };
+  }
+}
 
   componentDidMount() {
     Promise.all([
@@ -24,22 +27,23 @@ class App extends Component {
     ])
       .then(([notesRes, foldersRes]) => {
         if (!notesRes.ok){
-        console.log(notesRes)
+        
           return notesRes.json().then(e => Promise.reject(e))
         }
 
         if (!foldersRes.ok) {
-        console.log(foldersRes)
+      
           return foldersRes.json().then(e => Promise.reject(e))
         }
 
         return Promise.all([
+           
           notesRes.json(),
           foldersRes.json(),
         ])
       })
       .then(([notes, folders]) => {
-        this.setState({ notes, folders })
+        this.setState({ notes: notes, folders: folders })
       })
       .catch(error => {
         console.error({ error })
@@ -71,9 +75,10 @@ class App extends Component {
   }
 
   renderNavRoutes() {
+
     return (
       <>
-        {['/', '/folder/:folderId'].map(path =>
+        {['/', '/folders/:folderId'].map(path =>
           <Route
             exact
             key={path}
@@ -82,7 +87,7 @@ class App extends Component {
           />
         )}
         <Route
-          path='/note/:noteId'
+          path='/notes/:noteId'
           component={NotePageNav}
         />
         <Route
@@ -100,7 +105,7 @@ class App extends Component {
   renderMainRoutes() {
     return (
       <>
-        {['/', '/folder/:folderId'].map(path =>
+        {['/', '/folders/:folderId'].map(path =>
           <Route
             exact
             key={path}
@@ -109,7 +114,7 @@ class App extends Component {
           />
         )}
         <Route
-          path='/note/:noteId'
+          path='/notes/:noteId'
           component={NotePageMain}
         />
         <Route

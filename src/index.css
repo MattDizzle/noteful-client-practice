@@ -9,18 +9,19 @@ body {
   color: #fff;
 }
 
-main{
-  display:flex;
-  width:70%;
-  margin:auto;
+a {
+  text-decoration: none ;
 }
 
+
 h1, h2, h3 {
-  font-family: 'Squada One', sans-serif;
-  font-weight: 400;
-  margin:0px;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  color: #bbdefb;
+  color: #43a9fd;
+  font-size: 1.4em ;
+  text-emphasis: none;
+  text-decoration: none;
+  
 }
 
 h3 {
