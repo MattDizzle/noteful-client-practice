@@ -86,6 +86,7 @@ class App extends Component {
             component={NoteListNav}
           />
         )}
+       
         <Route
           path='/notes/:noteId'
           component={NotePageNav}
@@ -137,6 +138,7 @@ class App extends Component {
       addNote: this.handleAddNote,
       deleteNote: this.handleDeleteNote,
     }
+    console.log(this.state)
     return (
       <ApiContext.Provider value={value}>
         <div className='App'>
