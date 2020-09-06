@@ -22,8 +22,8 @@
   color: #bdbdbd;
   font-family: var(--custom-font);
   grid-area: header;
-  padding-left: 16px;
-  padding-top: 32px;
+  width: 100%;
+  text-align: center;
   text-shadow: 2px 1px 2px black;
 }
 
