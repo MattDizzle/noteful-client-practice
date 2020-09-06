@@ -11,31 +11,22 @@ import '../Note/Note.css'
 
 export default class NoteListNav extends React.Component {
   static defaultProps ={
-    onDeleteFolder: () => {},
+    onDeleteFolder: () => {}
+   
   }
 
   static contextType = ApiContext;
 
   handleClickDelete = e => {
+    // e.preventDefault()
     const folderId = e.currentTarget.value
-
-    e.preventDefault()
     
-    console.log(e.currentTarget.value)
-    console.log(folderId)
-    console.log(this.props)
-
     fetch(`${config.API_ENDPOINT}/folders/${folderId}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
       }
     })
-      // .then(res => {
-      //   if (!res.ok)
-      //     return res.json().then(e => Promise.reject(e))
-      //   return res.json()
-      // })
       .then(() => {
         this.context.deleteFolder(folderId)
         // allow parent to perform extra behaviour
