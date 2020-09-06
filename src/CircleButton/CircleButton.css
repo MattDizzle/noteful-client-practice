@@ -1,5 +1,5 @@
 .NavCircleButton {
-    background-color: #cacaca;
+    background-color: #ffffff;
     border-radius: 30px;
     border: 0;
     color: black;
@@ -15,6 +15,7 @@
   
   a.NavCircleButton {
     padding: 16px 8px 8px;
+    margin-top: 20px;
   }
   
   .NavCircleButton:hover {

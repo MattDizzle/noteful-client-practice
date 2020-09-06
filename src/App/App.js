@@ -138,7 +138,7 @@ class App extends Component {
       addNote: this.handleAddNote,
       deleteNote: this.handleDeleteNote,
     }
-    
+
     return (
       <ApiContext.Provider value={value}>
         <div className='App'>
@@ -147,9 +147,7 @@ class App extends Component {
           </nav>
           <header className='App__header'>
             <h1>
-              <Link to='/'>Noteful</Link>
-              {' '}
-              <FontAwesomeIcon icon='check-double' />
+              <Link to='/'>Noteful</Link>{' '} <FontAwesomeIcon icon='check-double' />
             </h1>
           </header>
           <main className='App__main'>
