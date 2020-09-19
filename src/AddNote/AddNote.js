@@ -115,7 +115,7 @@ export default class AddNote extends Component {
             </select>
           </div>
           <div className='buttons'>
-            <button type='submit' disabled={ this.validateName() || this.validateName }>
+            <button type='submit' disabled={ this.validateName() || this.validateContent() }>
               Add note
             </button>
           </div>
